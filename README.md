@@ -50,18 +50,18 @@ Hint: *fdg* is short for my nickname, so consider storing **your** themes within
 
 ## Available themes
 
-### Base Theme ([fdg-base](https://raw.github.com/frissdiegurke/protonmail-themes/master/dist/fdg-base-v0.0.1.min.css)) v0.0.1
+### Base Theme ([fdg-base](https://raw.githubusercontent.com/frissdiegurke/protonmail-themes/master/dist/fdg-base-v0.0.1.min.css)) v0.0.1
 
 This is the code base used for all other themes, with code-switches via variables etc.
 
 The default variables create a dark theme with blue and brown colors.
 
-[![home](https://raw.github.com/frissdiegurke/protonmail-themes/master/screenshots/base-messages.png)](https://raw.github.com/frissdiegurke/protonmail-themes/master/screenshots/base-messages.png)
-[![home](https://raw.github.com/frissdiegurke/protonmail-themes/master/screenshots/base-settings.png)](https://raw.github.com/frissdiegurke/protonmail-themes/master/screenshots/base-settings.png)
+[![Messages View](https://raw.githubusercontent.com/frissdiegurke/protonmail-themes/master/screenshots/base-messages.jpg)](https://raw.githubusercontent.com/frissdiegurke/protonmail-themes/master/screenshots/base-messages.jpg)
+[![Settings View](https://raw.githubusercontent.com/frissdiegurke/protonmail-themes/master/screenshots/base-settings.jpg)](https://raw.githubusercontent.com/frissdiegurke/protonmail-themes/master/screenshots/base-settings.jpg)
 
-### Dark Green ([fdg-dark-green](https://raw.github.com/frissdiegurke/protonmail-themes/master/dist/fdg-dark-green-v0.0.1.min.css)) v0.0.1
+### Dark Green ([fdg-dark-green](https://raw.githubusercontent.com/frissdiegurke/protonmail-themes/master/dist/fdg-dark-green-v0.0.1.min.css)) v0.0.1
 
 Dark background, Green, Turkey.
 
-[![home](https://raw.github.com/frissdiegurke/protonmail-themes/master/screenshots/dark-green-messages.png)](https://raw.github.com/frissdiegurke/protonmail-themes/master/screenshots/dark-green-messages.png)
-[![home](https://raw.github.com/frissdiegurke/protonmail-themes/master/screenshots/dark-green-settings.png)](https://raw.github.com/frissdiegurke/protonmail-themes/master/screenshots/dark-green-settings.png)
+[![Messages View](https://raw.githubusercontent.com/frissdiegurke/protonmail-themes/master/screenshots/dark-green-messages.jpg)](https://raw.githubusercontent.com/frissdiegurke/protonmail-themes/master/screenshots/dark-green-messages.jpg)
+[![Settings View](https://raw.githubusercontent.com/frissdiegurke/protonmail-themes/master/screenshots/dark-green-settings.jpg)](https://raw.githubusercontent.com/frissdiegurke/protonmail-themes/master/screenshots/dark-green-settings.jpg)
