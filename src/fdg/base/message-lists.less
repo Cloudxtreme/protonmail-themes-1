@@ -62,9 +62,9 @@ body table#messages {
     &.unread {
       background: mix(fade(@highlight-color, 15%), @brand-info, 80%);
 
-      //&, a, td {
-      //  color: mix(@text-color, @brand-info, 93%) !important;
-      //}
+      &, a, td {
+        color: mix(@text-color, @brand-secondary, 70%) !important;
+      }
 
       &:hover {
         background: mix(fade(@highlight-color, 18%), @brand-info, 80%);
@@ -74,9 +74,9 @@ body table#messages {
     &.starred {
       background: mix(fade(@highlight-color, 15%), @brand-success, 80%);
 
-      //&, a, td {
-      //  color: mix(@text-color, @brand-success, 93%) !important;
-      //}
+      &, a, td {
+        color: mix(@text-color, @brand-success, 93%) !important;
+      }
 
       &:hover {
         background: mix(fade(@highlight-color, 18%), @brand-success, 80%);
