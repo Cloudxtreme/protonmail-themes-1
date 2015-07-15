@@ -38,18 +38,26 @@
 //  }
 //}
 
-a.pure-button:visited {
-  color: fadeout(@btn-link-color, 10%);
+//a.pure-button:visited {
+//  color: fadeout(@btn-link-color, 10%);
+//}
+
+.linear-bg(@c1, @c2) when (lightness(@main-bg) < lightness(@text-color)) {
+  background: linear-gradient(@c1, @c2);
+}
+
+.linear-bg(@c1, @c2) when not (lightness(@main-bg) < lightness(@text-color)) {
+  background: linear-gradient(@c2, @c1);
 }
 
 .pure-button {
   &, &.pure-button-default {
-    background: linear-gradient(mix(@highlight-color, @main-bg, 30%), mix(@highlight-color, @main-bg, 20%));
+    .linear-bg(mix(@highlight-color, @main-bg, 30%), mix(@highlight-color, @main-bg, 20%));
     color: fadeout(@btn-link-color, 10%);
 
     &:not(.disabled):focus, &:hover {
       color: @btn-link-color;
-      background: linear-gradient(mix(@highlight-color, @main-bg, 28%), mix(@highlight-color, @main-bg, 25%));
+      .linear-bg(mix(@highlight-color, @main-bg, 28%), mix(@highlight-color, @main-bg, 25%));
     }
 
     &:hover {
@@ -58,25 +66,26 @@ a.pure-button:visited {
 
     &:active, &.active, &.action-trigger.active, &.pure-button-active, &.active:not(.disabled):focus, &.action-trigger.active:not(.disabled):focus, &.pure-button-active:not(.disabled):focus {
       color: fadeout(@btn-link-color, 5%);
-      background: linear-gradient(mix(@highlight-color, @main-bg, 17%), mix(@highlight-color, @main-bg, 33%));
+      .linear-bg(mix(@highlight-color, @main-bg, 17%), mix(@highlight-color, @main-bg, 33%));
       box-shadow: inset 0 4px 4px fade(@main-bg, 20%) !important;
     }
 
   }
 
   &.pure-button-primary {
-    background: linear-gradient(mix(@brand-primary, @main-bg, 50%), mix(@brand-primary, @main-bg, 40%));
+    .linear-bg(mix(@brand-primary, @main-bg, 50%), mix(@brand-primary, @main-bg, 40%));
+    color: fadeout(@btn-link-color, 10%);
 
     &:not(.disabled):focus, &:hover {
-      background: linear-gradient(mix(@brand-primary, @main-bg, 48%), mix(@brand-primary, @main-bg, 45%));
+      .linear-bg(mix(@brand-primary, @main-bg, 48%), mix(@brand-primary, @main-bg, 45%));
     }
 
     &:active, &.action-trigger.active, &.pure-button-active, &.action-trigger.active:not(.disabled):focus, &.pure-button-active:not(.disabled):focus {
-      background: linear-gradient(mix(@brand-primary, @main-bg, 37%), mix(@brand-primary, @main-bg, 53%));
+      .linear-bg(mix(@brand-primary, @main-bg, 37%), mix(@brand-primary, @main-bg, 53%));
     }
 
     &.disabled {
-      background: linear-gradient(mix(@brand-primary, @main-bg, 40%), mix(@brand-primary, @main-bg, 37%));
+      .linear-bg(mix(@brand-primary, @main-bg, 40%), mix(@brand-primary, @main-bg, 37%));
     }
 
     &:not(.disabled):focus {
@@ -87,7 +96,7 @@ a.pure-button:visited {
 
 .header .pure-button.disabled, .pure-button.disabled, .pure-button-default.disabled {
   color: fadeout(mix(@brand-secondary, @text-color, 5%), 40%);
-  background: linear-gradient(mix(@highlight-color, @main-bg, 20%), mix(@highlight-color, @main-bg, 17%));
+  .linear-bg(mix(@highlight-color, @main-bg, 20%), mix(@highlight-color, @main-bg, 17%));
   cursor: not-allowed;
 }
 

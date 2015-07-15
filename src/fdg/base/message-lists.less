@@ -1,12 +1,45 @@
+//#messages {
+//  .fa.fa-star-o, tr, tr a, tr a:hover, tr strong .fa {
+//    color: @text-color;
+//  }
+//}
+//body table#messages tr {
+//  .fa:hover, &.unread a:hover, &.unread:hover {
+//    color: @text-color;
+//  }
+//}
+// equals
+#messages .fa.fa-star-o, #messages tr, #messages tr a, #messages tr a:hover, #messages tr strong .fa,
+body table#messages tr .fa:hover, body table#messages tr.unread a:hover, body table#messages tr.unread:hover {
+  color: @text-color;
+}
+
+//body table#messages {
+//  .fa.fa-lock {
+//    &.external {
+//      color: @text-color !important;
+//    }
+//  }
+//  tr {
+//    &.unread, &.starred {
+//      &:hover {
+//        &, a, td {
+//          color: @text-color !important;
+//        }
+//      }
+//    }
+//  }
+//}
+// equals
+body table#messages .fa.fa-lock.external,
+body table#messages tr.unread:hover, body table#messages tr.unread:hover a, body table#messages tr.unread:hover td,
+body table#messages tr.starred:hover, body table#messages tr.starred:hover a, body table#messages tr.starred:hover td {
+  color: @text-color !important;
+}
+
 body table#messages {
-  .fa.fa-star-o, tr, tr a, tr a:hover, tr strong .fa {
-    color: @text-color;
-  }
   .fa.fa-lock {
     color: mix(@text-color, @brand-success, 30%) !important;
-    &.external {
-      color: @text-color !important;
-    }
   }
   .fa.fa-flag {
     color: fade(@brand-success, 70%);
@@ -21,10 +54,6 @@ body table#messages {
       background: fade(@highlight-color, 13%);
     }
 
-    .fa:hover, &.unread a:hover, &.unread:hover {
-      color: @text-color;
-    }
-
     td, &.unread td, &.starred td {
       background: none; // remove dirty default theme background-change
     }
@@ -33,32 +62,24 @@ body table#messages {
     &.unread {
       background: mix(fade(@highlight-color, 15%), @brand-info, 80%);
 
-      &, a, td {
-        color: mix(@text-color, @brand-info, 93%) !important;
-      }
+      //&, a, td {
+      //  color: mix(@text-color, @brand-info, 93%) !important;
+      //}
 
       &:hover {
         background: mix(fade(@highlight-color, 18%), @brand-info, 80%);
-
-        &, a, td {
-          color: @text-color !important;
-        }
       }
     }
     // starred
     &.starred {
       background: mix(fade(@highlight-color, 15%), @brand-success, 80%);
 
-      &, a, td {
-        color: mix(@text-color, @brand-success, 93%) !important;
-      }
+      //&, a, td {
+      //  color: mix(@text-color, @brand-success, 93%) !important;
+      //}
 
       &:hover {
         background: mix(fade(@highlight-color, 18%), @brand-success, 80%);
-
-        &, a, td {
-          color: @text-color !important;
-        }
       }
     }
   }

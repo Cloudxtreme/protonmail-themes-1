@@ -1,0 +1,31 @@
+body a, #footer .wrap a {
+  color: mix(@brand-info, @text-color, 30%);
+}
+
+a, #footer .wrap a {
+  &:visited {
+    color: mix(@main-bg, mix(@brand-info, @text-color, 30%), 10%);
+  }
+  &:hover {
+    color: mix(@brand-info, @text-color, 40%);
+  }
+  &:active {
+    color: mix(@brand-info, mix(@main-bg, @text-color, 15%), 35%);
+  }
+}
+
+#sidebar ul.menu li a, #mainHeader li a {
+  &, & span {
+    color: fade(@text-color, 60%);
+  }
+  &:hover, &:hover span, &.active span, &.active:hover {
+    color: fade(@text-color, 100%);
+  }
+  &.active {
+    color: fade(@text-color, 100%);
+  }
+}
+
+#sidebar ul.menu li a.active {
+  background: fade(@highlight-color, 10%);
+}

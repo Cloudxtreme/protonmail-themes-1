@@ -83,7 +83,7 @@ module.exports = function (grunt) {
     for (var i = 0; i < files.length; i ++) {
       var len = grunt.file.read(files[i]).length;
       if (len > CHAR_LIMIT) {
-        grunt.fail.warn("File " + files[i] + " failed - " + (CHAR_LIMIT - len) + " characters to much.");
+        grunt.fail.warn("File " + files[i] + " failed - " + (len - CHAR_LIMIT) + " character to much.");
       } else {
         grunt.log.ok("File " + files[i] + " ok - " + (CHAR_LIMIT - len) + " characters spare.");
       }

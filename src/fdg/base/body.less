@@ -3,8 +3,12 @@ body {
   color: fade(@text-color, 80%);
 }
 
-#page-m #main {
+#page-m #main, #footer, body.outside #mainHeader, .pure-table {
   background: @main-bg;
+}
+
+body #mainHeader, #main footer .wrap, footer .wrap {
+  background: fade(mix(@highlight-color, @brand-primary, 10%), 25%);
 }
 
 h1 {
@@ -37,24 +41,13 @@ h1 {
   color: fade(mix(@brand-secondary, @text-color, 30%), 80%);
 }
 
-body a {
-  color: mix(@brand-info, @text-color, 30%);
+#footer .wrap {
+  color: fade(@text-color, 80%);
 }
 
-a {
-  &:visited {
-    color: mix(@main-bg, mix(@brand-info, @text-color, 30%), 10%);
-  }
-  &:hover {
-    color: mix(@brand-info, @text-color, 40%);
-  }
-  &:active {
-    color: mix(@brand-info, mix(@main-bg, @text-color, 15%), 35%);
-  }
-}
-
-kbd, code {
-  background: @main-bg;
-  border: 1px solid fade(@highlight-color, 10%);
-  color: @text-color;
-}
+//kbd, code {
+//  background: @main-bg;
+//  text-shadow: none;
+//  border: 1px solid fade(@highlight-color, 10%);
+//  color: @text-color;
+//}
