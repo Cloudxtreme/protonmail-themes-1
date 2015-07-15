@@ -1,0 +1,35 @@
+#iframeMessage {
+  opacity: 0.5;
+}
+
+#primaryHeader #titleBar {
+  background: fade(@highlight-color, 50%);
+}
+
+#main #primaryHeader.starred #titleBar {
+  background: mix(fade(@highlight-color, 50%), @brand-success, 80%);
+}
+
+// damn 9k char limit
+//#message-metadata {
+  //background: fade(@highlight-color, 25%);
+  //
+  //.bubble {
+  //  color: fade(@text-color, 90%);
+  //  background: fade(@main-bg, 80%);
+  //  border: 1px solid fade(@highlight-color, 10%);
+  //
+  //  .fa.fa-lock {
+  //    color: @main-bg;
+  //  }
+  //}
+//}
+
+#imagez {
+  background: fade(@highlight-color, 25%);
+  color: mix(@brand-info, @text-color, 30%);
+}
+
+//#message-time strong, #message-metadata .pure-table td strong {
+//  color: fade(@text-color, 80%);
+//}

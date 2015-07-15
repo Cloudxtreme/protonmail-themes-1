@@ -1,0 +1,43 @@
+#editor, #eo_editor {
+  background: fade(mix(@brand-primary, white, 5%), 60%);
+  border-radius: 5px;
+  border: 1px solid fade(@brand-primary, 60%);
+  box-shadow: 0 0 4px 1px fade(@brand-primary, 60%);
+}
+
+#recipientDiv {
+  padding-right: 0;
+  border: none;
+  border-right: 2rem solid fade(@brand-secondary, 70%) !important;
+}
+
+#composeMain {
+  #fromDropDown .fa.fa-caret-down, #mobCCs {
+    color: fade(@text-color, 90%);
+    top: 3px;
+  }
+
+  .form-control .input-label {
+    background: mix(@brand-primary, @main-bg, 30%);
+    color: mix(@brand-primary, @highlight-color, 10%);
+    border: 1px solid fade(@highlight-color, 30%);
+    border-radius: 3px;
+    padding: 0.1rem 0.5rem;
+    height: 22px;
+    top: 4px;
+  }
+}
+
+.dropArea {
+  background: fade(@highlight-color, 10%);
+  border: 2px dashed fade(@main-bg, 20%);
+  &:hover {
+    background: fade(@highlight-color, 17%);
+  }
+}
+
+#composeLeft.dead {
+  #recipientDiv, #toolbar a, iframe, input, select, textarea {
+    background: fade(mix(@brand-secondary, white, 8%), 30%);
+  }
+}

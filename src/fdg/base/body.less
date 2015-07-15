@@ -1,0 +1,60 @@
+body {
+  background: @main-bg !important;
+  color: fade(@text-color, 80%);
+}
+
+#page-m #main {
+  background: @main-bg;
+}
+
+h1 {
+  color: @text-color;
+}
+
+.alert {
+  &.alert-default {
+    background: fade(@highlight-color, 15%);
+    color: mix(@brand-primary, @text-color, 10%);
+    border: 1px solid fade(@highlight-color, 15%);
+  }
+  &.alert-warning {
+    background: fade(@brand-warning, 30%);
+    color: mix(@brand-warning, @text-color, 30%);
+    border: 1px solid fade(@brand-warning, 15%);
+  }
+}
+
+.panel.panel-bordered {
+  background: fade(mix(@brand-primary, @highlight-color, 5%), 20%);
+  border: 1px solid fade(@highlight-color, 10%);
+}
+
+.page section {
+  border-top: 1px solid fade(@highlight-color, 35%);
+}
+
+.note {
+  color: fade(mix(@brand-secondary, @text-color, 30%), 80%);
+}
+
+body a {
+  color: mix(@brand-info, @text-color, 30%);
+}
+
+a {
+  &:visited {
+    color: mix(@main-bg, mix(@brand-info, @text-color, 30%), 10%);
+  }
+  &:hover {
+    color: mix(@brand-info, @text-color, 40%);
+  }
+  &:active {
+    color: mix(@brand-info, mix(@main-bg, @text-color, 15%), 35%);
+  }
+}
+
+kbd, code {
+  background: @main-bg;
+  border: 1px solid fade(@highlight-color, 10%);
+  color: @text-color;
+}

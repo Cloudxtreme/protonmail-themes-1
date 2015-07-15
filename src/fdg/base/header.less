@@ -1,0 +1,73 @@
+@btn-link-color: mix(@brand-secondary, @text-color, 20%);
+
+body.outside #mainHeader {
+  background: @main-bg;
+}
+
+body #mainHeader {
+  background: fade(mix(@highlight-color, @brand-primary, 10%), 25%);
+}
+
+.search.dark input {
+  background: fade(@highlight-color, 20%);
+  opacity: 0.5;
+
+  &:focus {
+    opacity: 1;
+  }
+}
+
+//#mainHeader p.hello {
+#mainHeader p {
+  font-family: monospace;
+  color: mix(@brand-secondary, @text-color, 70%);
+
+  // sadly not possible currently, `:before` gets `:` and `"\f007"` gets `f007`
+
+  //.icon() when (@user-icon) {
+  //  &:before {
+  //    content: "\f007";
+  //    font-size: 14px;
+  //    width: 1.28571429em;
+  //    text-align: center;
+  //    display: inline-block;
+  //    font: normal normal normal 14px/1 FontAwesome;
+  //    text-rendering: auto;
+  //    -webkit-font-smoothing: antialiased;
+  //  }
+  //}
+  //.icon();
+}
+
+.header {
+  &, &#headerListingActions {
+    background: fade(@highlight-color, 5%);
+    box-shadow: 0 1px 0 fade(@highlight-color, 30%);
+  }
+
+  #listing-actions-buttons ul li a:hover, #listing-actions-buttons ul li button:hover, #message-actions-buttons ul li a:hover, #message-actions-buttons ul li button:hover {
+    color: fade(@btn-link-color, 100%) !important;
+  }
+
+  // dropdown-menus
+  #listing-actions-buttons, #message-actions-buttons {
+    ul ul {
+      color: fade(@btn-link-color, 60%);
+      background: fade(mix(@main-bg, @text-color, 85%), 95%);
+
+      li button.disabled {
+        color: fade(@btn-link-color, 30%) !important;
+        background: fade(mix(@main-bg, @text-color, 70%), 95%) !important;
+      }
+    }
+
+    .action-parent ul li {
+      @dividing: fade(@highlight-color, 8%);
+      @top: fade(@highlight-color, 12%);
+      box-shadow: inset 0 -1px 0 @dividing;
+      &:first-child {
+        box-shadow: inset 0 1px 0 @top, inset 0 -1px 0 @dividing;
+      }
+    }
+  }
+}

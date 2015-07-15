@@ -1,0 +1,107 @@
+.pure-form {
+  input, select, textarea {
+    background: fade(mix(@brand-primary, @highlight-color, 5%), 10%);
+    color: fade(mix(@brand-primary, @text-color, 15%), 75%);
+    border: 1px solid fade(@highlight-color, 20%) !important;
+    &:focus {
+      border: 1px solid fade(mix(@brand-primary, @highlight-color, 50%), 35%) !important;
+    }
+  }
+
+  select option {
+    background: mix(mix(@brand-primary, @highlight-color, 5%), @main-bg, 10%);
+    color: @text-color;
+  }
+
+  // currently not possible since :: gets removed from custom theme
+  //input::-webkit-input-placeholder, input::-moz-placeholder {
+  //  color: mix(@brand-primary, @text-color, 5%);
+  //  opacity: 0.65;
+  //}
+}
+
+//.pure-form input[type=number] {
+#ExpirationTime {
+  padding: 1px 1px 1px .6em;
+  height: 30px;
+}
+
+//.ui-autocomplete {
+//  border: 1px solid fade(@highlight-color, 30%);
+//
+//  li.ui-menu-item {
+//    background: fade(mix(@brand-primary, mix(@highlight-color, @main-bg, 60%), 10%), 95%);
+//
+//    &.ui-state-focus {
+//      background: fade(mix(@brand-primary, mix(@highlight-color, @main-bg, 70%), 16%), 95%);
+//    }
+//  }
+//}
+
+a.pure-button:visited {
+  color: fadeout(@btn-link-color, 10%);
+}
+
+.pure-button {
+  &, &.pure-button-default {
+    background: linear-gradient(mix(@highlight-color, @main-bg, 30%), mix(@highlight-color, @main-bg, 20%));
+    color: fadeout(@btn-link-color, 10%);
+
+    &:not(.disabled):focus, &:hover {
+      color: @btn-link-color;
+      background: linear-gradient(mix(@highlight-color, @main-bg, 28%), mix(@highlight-color, @main-bg, 25%));
+    }
+
+    &:hover {
+      color: fade(@btn-link-color, 100%) !important;
+    }
+
+    &:active, &.active, &.action-trigger.active, &.pure-button-active, &.active:not(.disabled):focus, &.action-trigger.active:not(.disabled):focus, &.pure-button-active:not(.disabled):focus {
+      color: fadeout(@btn-link-color, 5%);
+      background: linear-gradient(mix(@highlight-color, @main-bg, 17%), mix(@highlight-color, @main-bg, 33%));
+      box-shadow: inset 0 4px 4px fade(@main-bg, 20%) !important;
+    }
+
+  }
+
+  &.pure-button-primary {
+    background: linear-gradient(mix(@brand-primary, @main-bg, 50%), mix(@brand-primary, @main-bg, 40%));
+
+    &:not(.disabled):focus, &:hover {
+      background: linear-gradient(mix(@brand-primary, @main-bg, 48%), mix(@brand-primary, @main-bg, 45%));
+    }
+
+    &:active, &.action-trigger.active, &.pure-button-active, &.action-trigger.active:not(.disabled):focus, &.pure-button-active:not(.disabled):focus {
+      background: linear-gradient(mix(@brand-primary, @main-bg, 37%), mix(@brand-primary, @main-bg, 53%));
+    }
+
+    &.disabled {
+      background: linear-gradient(mix(@brand-primary, @main-bg, 40%), mix(@brand-primary, @main-bg, 37%));
+    }
+
+    &:not(.disabled):focus {
+      color: @btn-link-color;
+    }
+  }
+}
+
+.header .pure-button.disabled, .pure-button.disabled, .pure-button-default.disabled {
+  color: fadeout(mix(@brand-secondary, @text-color, 5%), 40%);
+  background: linear-gradient(mix(@highlight-color, @main-bg, 20%), mix(@highlight-color, @main-bg, 17%));
+  cursor: not-allowed;
+}
+
+.header .navigation li, .header nav li {
+  border-right: 1px solid mix(@highlight-color, @main-bg, 7%);
+}
+
+#toolbar {
+  border: 1px solid mix(@highlight-color, @main-bg, 7%);
+
+  a {
+    border-left: 1px solid mix(@highlight-color, @main-bg, 7%) !important;
+    &:first-child {
+      border-left: none !important;
+    }
+  }
+}
