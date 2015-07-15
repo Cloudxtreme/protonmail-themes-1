@@ -45,7 +45,7 @@ function createPseudoMessage(unread, external, favorite, labels, archive, from, 
   $a.append("<span class=\"fa fa-clock-o transparent\"></span><strong>" + subject + "</strong>");
 
   var size = Math.floor(Math.random() * 1000) / 10;
-  size = size % 10 === 0 ? size + ".0" : size + "";
+  size = size % 1 === 0 ? size + ".0" : size + "";
 
   $tr
       .append("<td class=\"td_att\"></td>")
