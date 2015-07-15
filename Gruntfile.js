@@ -2,6 +2,8 @@
 
 var path = require("path");
 
+var CHAR_LIMIT = 9000;
+
 var paths = {
   dev: ".tmp",
   dist: "dist",
@@ -79,10 +81,11 @@ module.exports = function (grunt) {
     var options = this.options();
     var files = grunt.file.expand(options.files);
     for (var i = 0; i < files.length; i ++) {
-      if (grunt.file.read(files[i]).length > 9000) {
-        grunt.fail.warn("character-limit exceeded: " + files[i]);
+      var len = grunt.file.read(files[i]).length;
+      if (len > CHAR_LIMIT) {
+        grunt.fail.warn("File " + files[i] + " failed - " + (CHAR_LIMIT - len) + " characters to much.");
       } else {
-        grunt.log.ok("File " + files[i] + " ok");
+        grunt.log.ok("File " + files[i] + " ok - " + (CHAR_LIMIT - len) + " characters spare.");
       }
     }
   });
